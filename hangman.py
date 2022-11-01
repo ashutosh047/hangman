@@ -22,8 +22,12 @@ def check(a,f,t):
     return "".join(f)
 #function for playing game
 def play_game():
-    
-    l=['python', 'java', 'swift', 'javascript']
+    l=[]
+    with open("hm.txt",'r') as f:
+        l=f.read()
+    l=l.split(" ")
+    #print(l)
+    #l=['python', 'java', 'swift', 'javascript']
     t=random.choice(l)
     f=''
     pf=''
